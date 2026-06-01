@@ -1,17 +1,14 @@
 plugins {
     id("multiloader-base")
     id("java-library")
-    id("net.fabricmc.fabric-loom")
     id("io.freefair.lombok") version "9.2.0"
 }
 
-loom {
-    // Correct way to set mappings in Kotlin DSL
-    mappings = loom.officialMojangMappings()
-}
+// No fabric-loom plugin here – it's only needed in fabric and neoforge subprojects
 
 dependencies {
-    minecraft("com.mojang:minecraft:${BuildConfig.MINECRAFT_VERSION}")
+    // Provide Minecraft classes for compilation (no mappings needed)
+    compileOnly("com.mojang:minecraft:${BuildConfig.MINECRAFT_VERSION}")
 
     compileOnly("net.uku3lig:ukulib-common:${BuildConfig.UKULIB_VERSION}")
 
