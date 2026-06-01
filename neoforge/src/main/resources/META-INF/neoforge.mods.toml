@@ -14,14 +14,14 @@ description = "Display player's PvP Tiers in their nametag!"
 [[dependencies.tiertagger]]
 modId = "minecraft"
 type = "required"
-versionRange = "[26.1,)"
+versionRange = "[1.21.11,)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[dependencies.tiertagger]]
 modId = "neoforge"
 type = "required"
-versionRange = "[26.1.0.0,)"
+versionRange = "[1.21.11.0.0,)"
 ordering = "NONE"
 side = "CLIENT"
 
